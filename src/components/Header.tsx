@@ -8,13 +8,8 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="bg-healthcare-gradient p-2 rounded-lg">
-            <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-              <span className="text-healthcare-teal font-bold text-lg">F</span>
-            </div>
-          </div>
-          <span className="text-xl font-bold text-foreground">Fertility Clinic Innovators</span>
+        <div className="flex items-center space-x-3">
+          <img src="/src/assets/logo.png" alt="Fertility Clinic Innovators" className="h-12 w-auto" />
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -22,6 +17,7 @@ const Header = () => {
           <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
           <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
           <a href="#success-map" className="text-foreground hover:text-primary transition-colors">Success Map</a>
+          <a href="#podcast" className="text-foreground hover:text-primary transition-colors">Podcast</a>
           <a href="#experience" className="text-foreground hover:text-primary transition-colors">Experience</a>
         </nav>
 
@@ -50,6 +46,7 @@ const Header = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
             <a href="#success-map" className="text-foreground hover:text-primary transition-colors">Success Map</a>
+            <a href="#podcast" className="text-foreground hover:text-primary transition-colors">Podcast</a>
             <a href="#experience" className="text-foreground hover:text-primary transition-colors">Experience</a>
             <Button 
               variant="hero" 

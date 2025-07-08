@@ -4,20 +4,20 @@ import { Award, Briefcase } from "lucide-react";
 
 const ExperienceSection = () => {
   const credentials = [
-    "Family Nurse Practitioner",
-    "Certified Fertility Nurse",
-    "Doctorate of Pharmacy",
+    "Doctor of Pharmacy (PharmD)",
+    "Family Nurse Practitioner (FNP)",
+    "Certified Fertility Nurse (RN, CFN)",
     "Licensed Pharmacist",
-    "Master's in Business Administration",
-    "AI in Healthcare and startup strategy - Stanford"
+    "Master's in Business Administration (MBA)",
+    "AI in Healthcare & Startup Strategy - Stanford University"
   ];
 
   const experience = [
-    "20+ years in the Infertility Industry",
-    "10+ years in Healthcare Provider Education & Development",
-    "Expertise in Fertility Clinics & Biotech Startups",
-    "Certified in Regulatory Affairs & Pharmacovigilance",
-    "Certified in Innovative & Humanistic Leadership"
+    "20+ years transforming fertility clinic operations",
+    "10+ years in healthcare provider education & development",
+    "Expertise in fertility clinics & biotech startup strategy",
+    "Certified in regulatory affairs & pharmacovigilance",
+    "Certified in innovative & humanistic leadership methodologies"
   ];
 
   return (

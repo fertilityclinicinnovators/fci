@@ -40,12 +40,12 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    /* Custom healthcare colors */
-    --healthcare-teal: 168 85% 36%;
-    --healthcare-teal-light: 168 85% 75%;
-    --healthcare-warm: 36 100% 85%;
-    --healthcare-gradient: linear-gradient(135deg, hsl(var(--healthcare-teal)), hsl(var(--accent)));
-    --hero-gradient: linear-gradient(135deg, hsl(var(--healthcare-teal)) 0%, hsl(var(--accent)) 100%);
+    /* Original website color scheme */
+    --healthcare-teal: 180 100% 28%;
+    --healthcare-teal-light: 180 100% 68%;
+    --healthcare-warm: 25 100% 60%;
+    --healthcare-gradient: linear-gradient(135deg, hsl(var(--healthcare-teal)), hsl(var(--healthcare-warm)));
+    --hero-gradient: linear-gradient(135deg, hsl(var(--healthcare-teal)) 0%, hsl(var(--healthcare-warm)) 100%);
     
     /* Shadows and effects */
     --shadow-soft: 0 4px 20px hsl(var(--healthcare-teal) / 0.1);

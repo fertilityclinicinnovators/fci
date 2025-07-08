@@ -4,13 +4,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="bg-healthcare-gradient p-2 rounded-lg">
-                <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-                  <span className="text-healthcare-teal font-bold text-lg">F</span>
-                </div>
-              </div>
-              <span className="text-xl font-bold">Fertility Clinic Innovators</span>
+            <div className="flex items-center space-x-3">
+              <img src="/src/assets/logo.png" alt="Fertility Clinic Innovators" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-background/80">
               Supporting fertility clinic leaders in building purposeful growth strategies
@@ -23,6 +18,7 @@ const Footer = () => {
               <a href="#about" className="text-background/80 hover:text-background transition-colors">About Us</a>
               <a href="#services" className="text-background/80 hover:text-background transition-colors">Services</a>
               <a href="#success-map" className="text-background/80 hover:text-background transition-colors">Success Map</a>
+              <a href="#podcast" className="text-background/80 hover:text-background transition-colors">Podcast</a>
               <a href="#experience" className="text-background/80 hover:text-background transition-colors">Experience</a>
             </nav>
           </div>
