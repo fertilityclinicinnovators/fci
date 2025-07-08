@@ -9,15 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-primary/20 bg-background/80 text-primary hover:bg-primary/5 backdrop-blur-sm",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-healthcare-gradient text-white hover:shadow-glow font-semibold tracking-wide transition-all duration-300 shadow-medium border-0",
+        healthcare: "bg-healthcare-teal text-white hover:bg-healthcare-teal/90 shadow-soft font-medium",
+        warm: "bg-healthcare-warm text-foreground hover:bg-healthcare-warm/80 shadow-soft",
       },
       size: {
         default: "h-10 px-4 py-2",
