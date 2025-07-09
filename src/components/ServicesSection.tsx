@@ -1,8 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, Users, Settings } from "lucide-react";
-import educationService from "@/assets/education-service.jpg";
-import collaborationService from "@/assets/collaboration-service.jpg";
-import optimizationService from "@/assets/optimization-service.jpg";
+import { GraduationCap, Users, Settings, Check } from "lucide-react";
 
 const ServicesSection = () => {
   const services = [
@@ -10,58 +7,82 @@ const ServicesSection = () => {
       icon: GraduationCap,
       title: "Education & Leadership Development",
       description: "Empowering new employees and leadership teams with specialized training in reproductive endocrinology and fertility clinic management.",
-      image: educationService
+      benefits: [
+        "Customized training programs",
+        "Leadership development",
+        "Specialized REI education",
+        "Team building workshops"
+      ]
     },
     {
       icon: Users,
       title: "Teaming & Collaboration",
       description: "Fostering strong interdisciplinary teamwork to ensure seamless communication, shared responsibility, and adaptability in patient care.",
-      image: collaborationService
+      benefits: [
+        "Interdisciplinary collaboration",
+        "Communication strategies",
+        "Team dynamics optimization",
+        "Conflict resolution"
+      ]
     },
     {
       icon: Settings,
-      title: "Operational Optimization",
+      title: "Operational Excellence",
       description: "Improving clinic workflows, efficiency, and resource allocation to enhance patient experience and profitability.",
-      image: optimizationService
+      benefits: [
+        "Process optimization",
+        "Resource management",
+        "Efficiency improvements",
+        "Patient flow analysis"
+      ]
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-24 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl font-bold text-foreground">Consulting Services</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions tailored to transform your fertility clinic operations and enhance patient outcomes
+        <div className="text-center space-y-4 mb-16 max-w-4xl mx-auto">
+          <span className="inline-block px-4 py-1.5 text-sm font-medium text-primary bg-primary/10 rounded-full mb-4">
+            Our Expertise
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">Premium Consulting Services</h2>
+          <p className="text-xl text-muted-foreground">
+            Tailored solutions designed to elevate your fertility clinic's performance and patient care
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-medium transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-healthcare-gradient/80 flex items-center justify-center">
-                    <IconComponent className="h-12 w-12 text-white" />
-                  </div>
+              <Card 
+                key={index} 
+                className="group p-8 hover:shadow-xl transition-all duration-300 border-2 border-primary/10 bg-background/95 backdrop-blur-sm hover:border-primary/30 hover:-translate-y-1 relative overflow-hidden"
+              >
+                <div className="absolute -top-3 -right-3 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 text-primary relative z-10">
+                  <IconComponent className="h-6 w-6" />
                 </div>
                 
-                <CardHeader>
+                <CardHeader className="p-0 mb-4">
                   <CardTitle className="text-xl font-bold text-foreground">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                <CardContent className="p-0 space-y-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     {service.description}
                   </p>
+                  
+                  <div className="space-y-3 mt-6">
+                    {service.benefits.map((benefit, i) => (
+                      <div key={i} className="flex items-start space-x-3">
+                        <Check className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                        <span className="text-foreground/90">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             );

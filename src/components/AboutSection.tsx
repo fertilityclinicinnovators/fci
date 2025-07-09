@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
-import kellyPhoto from "@/assets/kelly-photo.jpg";
+
 
 const AboutSection = () => {
   const expertisePoints = [
@@ -55,8 +55,8 @@ const AboutSection = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src={kellyPhoto} 
-                alt="Dr. Kelly Gonda - Fertility Clinic Consultant" 
+                src="/Images/fertility clinic Innovators 3.png" 
+                alt="Fertility Clinic Innovators" 
                 className="w-full h-full object-cover"
               />
             </div>

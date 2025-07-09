@@ -5,7 +5,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/src/assets/logo.png" alt="Fertility Clinic Innovators" className="h-12 w-auto brightness-0 invert" />
+              <img 
+                src="/Images/Fertility Clinic Innovators.png" 
+                alt="Fertility Clinic Innovators" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-background/80">
               Supporting fertility clinic leaders in building purposeful growth strategies
@@ -39,7 +43,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-background/60">
-            © 2024 Fertility Clinic Innovators. All rights reserved.
+            © 2025 Fertility Clinic Innovators. All rights reserved.
           </p>
         </div>
       </div>

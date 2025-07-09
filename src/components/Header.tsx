@@ -9,7 +9,7 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <img src="/src/assets/logo.png" alt="Fertility Clinic Innovators" className="h-12 w-auto" />
+          <img src="/Images/Fertility Clinic Innovators.png" alt="Fertility Clinic Innovators" className="h-12 w-auto" />
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">

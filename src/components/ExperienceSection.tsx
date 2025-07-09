@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Award, Briefcase } from "lucide-react";
+import { Award, Briefcase, Check, Diamond } from "lucide-react";
 
 const ExperienceSection = () => {
   const credentials = [
@@ -21,28 +21,61 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-background">
+    <section id="experience" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl font-bold text-foreground">Credentials & Experience</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Credentials & Experience</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Extensive expertise combining clinical practice, business acumen, and innovative leadership
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <Card className="border-0 bg-card/50 backdrop-blur-sm">
-            <CardHeader className="text-center">
-              <div className="mx-auto w-16 h-16 bg-healthcare-gradient rounded-full flex items-center justify-center mb-4">
-                <Award className="h-8 w-8 text-white" />
+        <div className="relative bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 lg:p-16 mb-16 overflow-hidden">
+          <div className="relative z-10">
+            <div className="max-w-2xl">
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Let's explore initiatives that enhance teamwork and contribute to lasting nurse retention within your organization.
+              </h3>
+              <Button 
+                variant="warm" 
+                size="lg"
+                className="text-lg px-8 py-6 font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+                onClick={() => window.open('https://calendly.com/kellyjgonda/30min', '_blank')}
+              >
+                Book a Free 30 Minute Strategy Call
+              </Button>
+            </div>
+          </div>
+          <div className="absolute right-0 bottom-0 h-full w-auto max-w-[50%]">
+            <img 
+              src="/Images/fertility clinic Innovators Kelly Gonda.png" 
+              alt="Kelly Gonda - Fertility Innovator"
+              className="h-full w-auto object-cover object-bottom"
+              style={{
+                clipPath: 'polygon(20% 0%, 100% 0, 100% 100%, 0% 100%)',
+              }}
+            />
+          </div>
+          <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <Card className="border border-border/50 bg-background/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="text-center pb-6">
+              <div className="mx-auto w-20 h-20 bg-healthcare-gradient rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <Award className="h-10 w-10 text-white" />
               </div>
-              <CardTitle className="text-2xl font-bold text-foreground">Credentials</CardTitle>
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Credentials
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
+            <CardContent className="px-8 pb-8">
+              <ul className="space-y-4">
                 {credentials.map((credential, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <span className="text-primary font-bold">✅</span>
+                  <li key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <Check className="h-5 w-5 text-primary" />
+                    </div>
                     <span className="text-foreground">{credential}</span>
                   </li>
                 ))}
@@ -50,18 +83,22 @@ const ExperienceSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-0 bg-card/50 backdrop-blur-sm">
-            <CardHeader className="text-center">
-              <div className="mx-auto w-16 h-16 bg-accent rounded-full flex items-center justify-center mb-4">
-                <Briefcase className="h-8 w-8 text-accent-foreground" />
+          <Card className="border border-border/50 bg-background/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="text-center pb-6">
+              <div className="mx-auto w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                <Briefcase className="h-10 w-10 text-primary" />
               </div>
-              <CardTitle className="text-2xl font-bold text-foreground">Experience</CardTitle>
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                Experience
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
+            <CardContent className="px-8 pb-8">
+              <ul className="space-y-4">
                 {experience.map((exp, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <span className="text-accent font-bold">🔹</span>
+                  <li key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <Diamond className="h-4 w-4 text-primary mt-1" />
+                    </div>
                     <span className="text-foreground">{exp}</span>
                   </li>
                 ))}
@@ -70,19 +107,7 @@ const ExperienceSection = () => {
           </Card>
         </div>
 
-        <div className="text-center bg-healthcare-gradient rounded-2xl p-12 text-white">
-          <h3 className="text-2xl font-bold mb-4">
-            Let's explore initiatives that enhance teamwork and contribute to lasting nurse retention within your organization.
-          </h3>
-          <Button 
-            variant="warm" 
-            size="lg"
-            className="text-lg px-8 py-6"
-            onClick={() => window.open('https://calendly.com/kellyjgonda/30min', '_blank')}
-          >
-            Book a Free 30 Minute Strategy Call
-          </Button>
-        </div>
+
       </div>
     </section>
   );
